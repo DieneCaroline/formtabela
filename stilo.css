@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+:foot {
+    --gradient: linear-gradient(to rigth, rgba(173, 18, 245, 0, 788), rgb(#a01c69))
+}
+body{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#cf5c9f, #a82d50);
+}
+.container{
+    width: 70%;
+    height: 600px;
+    padding: 2rem;
+    margin-top: 150px;
+    border-radius: 8px;
+    background-color: #eba2cc;
+}
+.container-form{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+form{
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+}
+form label{
+    display: block;
+    padding: 0.5rem;
+    font-size: 17px;
+    color: #a82d50;
+}
+form input{
+    width: 200px;
+    padding: 0.6rem;
+    margin: 0.4rem;
+    margin-bottom: 8px;
+    border-radius: 0.3rem;
+    border: none;
+    box-shadow: 3px 1px 6px black;
+}
+input :focus-visible{
+    background-color: purple;
+    outline: 1px solid pink;
+}
+.submit{
+    margin-top: 20px;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 15px;
+    border: none;
+    width: 80%;
+    color: white;
+    background: #a82d50;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+    .submit:hover, .login:hover{
+        transform: scale(1.1);
+    }
+    .text{
+        font-size: 30px;
+        color: transparent;
+        background: #a82d50;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+    .text::after{
+        content:"";
+        display: block;
+        width: 5rem;
+        height: 0.3rem;
+        margin: 0 auto;
+        border-radius: 2rem;
+        position: absolute;
+        background: #a82d50;         
+    }
+    .login{
+        width: 80px;
+        border-radius: 8px;
+        height: 40px;
+        font-size: 15px;
+        border: none;
+        color: white;
+        background: #e04571;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    @media (max-width: 1200px) {
+        .container{
+            width: 70%;
+            height: 600px;
+        }
+    }
+    @media (max-width: 750px) {
+        form{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-height: 400px;
+            overflow-y: auto;
+            position: relative;
+        }
+        form::-webkit-scrollbar{
+            width: 12px;
+            background: #a82d50;
+            border-radius: 5px;
+        }
+        
+    }
